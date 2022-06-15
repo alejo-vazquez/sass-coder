@@ -1,0 +1,110 @@
+/*paleta*/ 
+$color1:#01415B;
+$color2:#005148;
+$color3:#019587;
+$color4:#A6BC09;
+$color5:#CCEA8D; 
+
+
+$mapa1: (
+    primario :red,
+    secundario:black,
+
+);
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+$animal: perro;
+
+body{
+    @if $animal == perro {
+        background-color: $color3;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    @else if $animal == gato{
+        background-color: $color2;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.navbar{
+    background-color: $color1;
+}
+
+.navbar-brand{
+    margin-right: 285px;
+}
+
+.main-index{
+    color: $color5;
+}
+
+.h2-index{
+    text-align: center;
+    margin-top: 50px;
+}
+.p-index{
+    text-align: center;
+    margin-top: 40px;
+}
+.imagen-index{
+    margin-left: 190px;
+    margin-bottom: 20px;
+}
+
+footer{
+    background-color: $color1;
+}
+.boton-footer{
+    font-size: 20px;
+}
+.redes{
+    text-decoration: none;
+    font-size: xx-large;
+}
+.redes :hover{
+    @extend .redes;
+    color: map-get($map: $mapa1, $key:primario );
+    margin-left: 8px;
+}
+
+.formu{
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+@mixin sizes ($width, $height, $border) {
+    width: $width;
+    height: $height;
+    border: $border;
+}
+
+.imagen-galeria{
+    margin: 20px;
+    @include sizes(600px, 400px, map-get($map: $mapa1, $key:secundario ) solid)
+}
+
+.imagen-galeria:hover{
+    transform: scale(1.06);
+}
+
+.reservaciones{
+    margin: 100px;
+}
+
+.imagen-menu{
+    margin: 20px;
+    @include sizes(400px, 200px,map-get($map: $mapa1, $key:secundario ) solid)
+}
+.imagen-menu:hover{
+    transform: scale(1.17);
+}
+
+
+.texto-menu{
+    margin-left: 50px;
+    color: $color5;
+}
