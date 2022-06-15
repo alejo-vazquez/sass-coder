@@ -1,1 +1,1 @@
-agregue keywords, una descripcion, viewport, un icono, le agregue sass, mapas, un if y else if, un extend y mixim,  
+agregue keywords, una descripcion, viewport, un icono, le agregue sass, mapas, un if y else if, un extend, un mixim y cambie el color del fondo de body.  
